@@ -1,0 +1,28 @@
+[package]
+name = "cucumber_messages"
+version = "0.1.0"
+authors = ["Michael Mitteregger <michael.mitteregger@gmx.at>"]
+description = """
+Cucumber Messages for Rust (Protocol Buffers)
+"""
+homepage = "https://github.com/cucumber/cucumber/tree/master/cucumber-messages"
+repository = "https://github.com/cucumber/cucumber/tree/master/cucumber-messages/rust"
+readme = "README.md"
+keywords = ["cucumber", "messages"]
+license = "MIT"
+edition = "2018"
+
+[features]
+default = []
+uuid_v4 = ["uuid/v4"]
+ndjson = ["serde", "serde_json"]
+
+[dependencies]
+bytes = "0.5"
+prost = "0.6"
+serde = { version = "1", optional = true, features = ["derive"] }
+serde_json = { version = "1", optional = true }
+uuid = { version = "0.8", optional = true }
+
+[build-dependencies]
+prost-build = "0.6"
