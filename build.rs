@@ -29,6 +29,7 @@ fn add_serde_attributes(config: &mut Config) {
             "Attachment.body",
             "PickleStepArgument.message",
             "CommandActionComplete.result",
+            "SourceReference.reference",
         ],
     );
     skip_serializing_empty_options(
@@ -50,7 +51,6 @@ fn add_serde_attributes(config: &mut Config) {
             "FeatureChild.value",
             "RuleChild.value",
             "Examples.table_header",
-            "Attachment.body",
             "PickleStepArgument.message",
             "SourcesConfig.filters",
             "SourcesConfig.order",
@@ -95,7 +95,6 @@ fn add_serde_attributes(config: &mut Config) {
     skip_serializing_empty_strings(
         config,
         &[
-            "uri",
             "language",
             "keyword",
             "name",
@@ -118,6 +117,7 @@ fn add_serde_attributes(config: &mut Config) {
             "completed_id",
             "absolute_path",
             "data",
+            "Attachment.body",
             "Group.value",
             "Platform.implementation",
             "Platform.version",

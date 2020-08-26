@@ -1,11 +1,11 @@
 pub use generated::envelope::Message;
 pub use generated::Envelope;
+pub use generated::ParseError;
 
 pub mod ast;
 pub mod attachment;
 pub mod command;
 pub mod event;
-pub mod filter;
 pub mod pickle;
 pub mod source;
 pub mod test;
